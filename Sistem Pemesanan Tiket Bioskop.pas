@@ -112,8 +112,15 @@ begin
     writeln('5. Keluar');
     writeln('Pilih menu: ');
     readln(pilihan);
-
-
+  case pilihan of
+      1: TampilkanKursi;
+      2: PesanKursi;
+      3: BatalkanKursi;
+      4: writeln('Total kursi yang sudah dipesan: ', HitungKursiDipesan);
+      5: writeln('Terima kasih telah menggunakan sistem.');
+    else
+      writeln('Pilihan tidak valid.');
+    end;
 begin
   InisialisasiKursi;
   MenuUtama;
