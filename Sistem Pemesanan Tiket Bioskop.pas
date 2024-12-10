@@ -71,6 +71,17 @@ begin
   write('Masukkan nomor baris (1-', MAX_BARIS, '): '); readln(baris);
   write('Masukkan nomor kolom (1-', MAX_KOLOM, '): '); readln(kolom);
   
+  if ApakahTersedia(baris, kolom) then
+  begin
+    write('Masukkan nama pemesan: '); 
+    readln(Bioskop[baris, kolom].NamaPemesan);
+    Bioskop[baris, kolom].Status := 'B'; 
+    writeln('Kursi berhasil dipesan!');
+  end
+  else
+    writeln('Kursi sudah dipesan. Pilih kursi lain.');
+end;
+
 begin
   InisialisasiKursi;
   MenuUtama;
