@@ -121,6 +121,14 @@ begin
     else
       writeln('Pilihan tidak valid.');
     end;
+    if (pilihan <> 5) then
+    begin
+      writeln('Tekan Enter untuk kembali ke menu...');
+      readln;
+    end;
+  until pilihan = 5;
+end;
+
 begin
   InisialisasiKursi;
   MenuUtama;
