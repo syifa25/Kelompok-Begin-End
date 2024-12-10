@@ -47,6 +47,23 @@ begin
   HitungKursiDipesan := jumlah;
 end;
 
+procedure TampilkanKursi;
+var
+  i, j: integer;
+begin
+  writeln('Layout Kursi: (A = Available, B = Booked)');
+  writeln('------------------------------------------');
+  for i := 1 to MAX_BARIS do
+  begin
+    for j := 1 to MAX_KOLOM do
+    begin
+      write(Bioskop[i, j].Status, ' ');
+    end;
+    writeln;
+  end;
+  writeln('------------------------------------------');
+end;
+
 begin
   InisialisasiKursi;
   MenuUtama;
