@@ -64,6 +64,13 @@ begin
   writeln('------------------------------------------');
 end;
 
+procedure PesanKursi;
+var
+  baris, kolom: integer;
+begin
+  write('Masukkan nomor baris (1-', MAX_BARIS, '): '); readln(baris);
+  write('Masukkan nomor kolom (1-', MAX_KOLOM, '): '); readln(kolom);
+  
 begin
   InisialisasiKursi;
   MenuUtama;
