@@ -35,6 +35,18 @@ begin
     ApakahTersedia := false;
 end;
 
+function HitungKursiDipesan: integer;
+var
+  i, j, jumlah: integer;
+begin
+  jumlah := 0;
+  for i := 1 to MAX_BARIS do
+    for j := 1 to MAX_KOLOM do
+      if (Bioskop[i, j].Status = 'B') then
+        inc(jumlah);
+  HitungKursiDipesan := jumlah;
+end;
+
 begin
   InisialisasiKursi;
   MenuUtama;
