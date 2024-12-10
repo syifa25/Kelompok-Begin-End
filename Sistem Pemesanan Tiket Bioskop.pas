@@ -81,6 +81,7 @@ begin
   else
     writeln('Kursi sudah dipesan. Pilih kursi lain.');
 end;
+
 procedure BatalkanKursi;
 var
   baris, kolom: integer;
@@ -96,6 +97,22 @@ if not ApakahTersedia(baris, kolom) then
   else
     writeln('Kursi belum dipesan.');
 end;
+
+procedure MenuUtama;
+var
+  pilihan: integer;
+begin
+  repeat
+    clrscr;
+    writeln('Sistem Pemesanan Tiket Bioskop');
+    writeln('1. Tampilkan Layout Kursi');
+    writeln('2. Pesan Kursi');
+    writeln('3. Batalkan Pemesanan');
+    writeln('4. Hitung Kursi yang Sudah Dipesan');
+    writeln('5. Keluar');
+    writeln('Pilih menu: ');
+    readln(pilihan);
+
 
 begin
   InisialisasiKursi;
