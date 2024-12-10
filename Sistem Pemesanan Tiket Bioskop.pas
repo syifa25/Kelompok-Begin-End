@@ -15,3 +15,8 @@ type
 var
   Bioskop: array[1..MAX_BARIS, 1..MAX_KOLOM] of TKursi;
 
+
+begin
+  InisialisasiKursi;
+  MenuUtama;
+end.
