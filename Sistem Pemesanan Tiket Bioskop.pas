@@ -27,6 +27,14 @@ begin
     end;
 end;
 
+function ApakahTersedia(baris, kolom: integer): boolean;
+begin
+  if (Bioskop[baris, kolom].Status = 'A') then
+    ApakahTersedia := true
+  else
+    ApakahTersedia := false;
+end;
+
 begin
   InisialisasiKursi;
   MenuUtama;
