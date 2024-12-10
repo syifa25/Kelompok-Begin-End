@@ -15,6 +15,17 @@ type
 var
   Bioskop: array[1..MAX_BARIS, 1..MAX_KOLOM] of TKursi;
 
+procedure InisialisasiKursi;
+var
+  i, j: integer;
+begin
+  for i := 1 to MAX_BARIS do
+    for j := 1 to MAX_KOLOM do
+    begin
+      Bioskop[i, j].Status := 'A'; // Semua kursi awalnya tersedia
+      Bioskop[i, j].NamaPemesan := '';
+    end;
+end;
 
 begin
   InisialisasiKursi;
