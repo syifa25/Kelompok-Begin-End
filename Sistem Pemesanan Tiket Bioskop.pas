@@ -87,6 +87,15 @@ var
 begin
   write('Masukkan nomor baris (1-', MAX_BARIS, '): '); readln(baris);
   write('Masukkan nomor kolom (1-', MAX_KOLOM, '): '); readln(kolom);
+if not ApakahTersedia(baris, kolom) then
+  begin
+    Bioskop[baris, kolom].Status := 'A'; // Ubah status menjadi available
+    Bioskop[baris, kolom].NamaPemesan := '';
+    writeln('Pemesan kursi berhasil dibatalkan.');
+  end
+  else
+    writeln('Kursi belum dipesan.');
+end;
 
 begin
   InisialisasiKursi;
